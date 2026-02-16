@@ -1,1 +1,1 @@
-# WikiDB
+# WikitDB
