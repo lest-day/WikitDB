@@ -1,6 +1,4 @@
-import { styles } from './styles.js';
 import { formatDate } from '../utils/helpers.js';
-import 'rippleui/dist/css/rippleui.css';
 
 export function renderSuccess(article, wiki, page) {
   const title = article?.title || '无标题';
@@ -20,7 +18,8 @@ export function renderSuccess(article, wiki, page) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${title} - 维基条目 · 躺平维基</title>
+    <title>${title} - WikitDB</title>
+    <link href="https://cdn.jsdelivr.net/npm/rippleui@1.12.1/dist/css/rippleui.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="card">
