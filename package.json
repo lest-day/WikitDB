@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "start": "vercel dev"
+  },
   "dependencies": {
     "rippleui": "^1.12.1"
   }

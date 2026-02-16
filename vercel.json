@@ -1,0 +1,6 @@
+{
+    "name": "wikitdb",
+    "cleanUrls": true,
+    "trailingSlash": false,
+    "headers": []
+}
