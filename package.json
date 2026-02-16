@@ -1,9 +1,11 @@
 {
-  "main": "src/index.js",
-  "scripts": {
-    "start": "vercel dev"
-  },
   "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "rippleui": "^1.12.1"
+  },
+  "scripts": {
+    "start": "vercel dev",
+    "build": "vercel build"
   }
 }
