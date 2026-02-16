@@ -1,6 +1,5 @@
 {
     "name": "wikitdb",
     "cleanUrls": true,
-    "trailingSlash": false,
-    
+    "trailingSlash": false
 }
