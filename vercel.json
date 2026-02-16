@@ -2,6 +2,9 @@
     "name": "wikitdb",
     "cleanUrls": true,
     "trailingSlash": false,
-    "headers": [],
-    "routes": []
+    "headers": [
+        {
+            "source": "/src/(.*)"
+        }
+    ]
 }
