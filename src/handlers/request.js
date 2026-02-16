@@ -1,6 +1,8 @@
 import { fetchArticleData } from '../services/graphql.js';
-import { renderSuccess, renderError } from '../templates/render.js';
+import { renderSuccess } from '../templates/render.js';
+import { renderError } from './error.js';
 import { decodePathPart, validatePath } from '../utils/helpers.js';
+
 
 export async function handleRequest(request) {
   const url = new URL(request.url);
