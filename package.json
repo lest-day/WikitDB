@@ -1,11 +1,14 @@
 {
+  "name": "wikitdb",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "vercel dev",
+    "build": "echo 'Build complete'",
+    "dev": "vercel dev"
+  },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rippleui": "^1.12.1"
-  },
-  "scripts": {
-    "start": "vercel dev",
-    "build": "vercel build"
   }
 }
