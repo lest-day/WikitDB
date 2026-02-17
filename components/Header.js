@@ -27,8 +27,8 @@ const Header = () => {
                             <div class="flex space-x-4">
                                 <a href="/pages" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">页面</a>
                                 <a href="/authors" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">作者</a>
-                                <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">工具</a>
-                                <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">关于</a>
+                                <a href="/tools" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">工具</a>
+                                <a href="/about" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">关于</a>
                             </div>
                         </div>
                     </div>
@@ -50,13 +50,13 @@ const Header = () => {
                                 </svg>
                             </button>
 
-                            <el-options anchor="bottom start" popover class="max-h-56 w-3xs overflow-auto rounded-md bg-gray-800 py-1 text-base [--anchor-gap:--spacing(1)] data-leave:transition data-leave:transition-discrete data-leave:duration-100 data-leave:ease-in data-closed:data-leave:opacity-0 sm:text-sm">
+                            <el-options anchor="bottom start" popover class="max-h-56 w-4xs overflow-auto rounded-md bg-gray-800 py-1 text-base [--anchor-gap:--spacing(1)] data-leave:transition data-leave:transition-discrete data-leave:duration-100 data-leave:ease-in data-closed:data-leave:opacity-0 sm:text-sm">
                                 {config.SUPPOST_WIKI.map((option, index) => (
-                                    <el-option value={index.toString()} class="group/option relative block cursor-default py-2 pr-9 pl-3 text-sm font-medium text-gray-300 select-none focus:text-white">
-                                        <div class="flex items-center">
+                                    <el-option value="1" class="group/option relative block cursor-default py-2 pr-9 pl-3 text-sm font-medium text-gray-300 select-none focus:text-white">
+                                        <a href={`?wiki=${option.PAEAM}`} className="flex items-center">
                                             <img src={option.ImgURL} alt="" class="size-5 shrink-0 rounded-full" />
                                             <span class="ml-3 block truncate font-normal group-aria-selected/option:font-semibold">{option.NAME}</span>
-                                        </div>
+                                        </a>
                                         <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-indigo-400 group-not-aria-selected/option:hidden group-focus/option:text-white in-[el-selectedcontent]:hidden">
                                             <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
                                                 <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
@@ -73,15 +73,15 @@ const Header = () => {
             <el-disclosure id="mobile-menu" hidden class="block sm:hidden">
                 <div class="space-y-1 px-2 pt-2 pb-3">
                     <div class="grid grid-cols-2 gap-2">
-                        <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">
+                        <a href="/pages" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">
                             <i class="fa-solid fa-file"></i> 页面
                         </a>
-                        <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">
+                        <a href="/authors" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">
                             <i class="fa-solid fa-user"></i> 作者
                         </a>
-                        <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">
+                        <a href="/tools" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">
                             <i class="fa-solid fa-toolbox"></i> 工具</a>
-                        <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">
+                        <a href="/about" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-white/5 hover:text-white">
                             <i class="fa-solid fa-circle-info"></i> 关于
                         </a>
                     </div>
@@ -96,13 +96,13 @@ const Header = () => {
                             </svg>
                         </button>
 
-                        <el-options anchor="bottom start" popover class="max-h-56 w-3xs overflow-auto rounded-md bg-gray-800 py-1 text-base [--anchor-gap:--spacing(1)] data-leave:transition data-leave:transition-discrete data-leave:duration-100 data-leave:ease-in data-closed:data-leave:opacity-0 sm:text-sm">
+                        <el-options anchor="bottom start" popover class="max-h-56 w-4xs overflow-auto rounded-md bg-gray-800 py-1 text-base [--anchor-gap:--spacing(1)] data-leave:transition data-leave:transition-discrete data-leave:duration-100 data-leave:ease-in data-closed:data-leave:opacity-0 sm:text-sm">
                             {config.SUPPOST_WIKI.map((option, index) => (
-                                <el-option value={index.toString()} class="group/option relative block cursor-default py-2 pr-9 pl-3 text-sm font-medium text-gray-300 select-none focus:text-white">
-                                    <div class="flex items-center">
+                                <el-option value="1" class="group/option relative block cursor-default py-2 pr-9 pl-3 text-sm font-medium text-gray-300 select-none focus:text-white">
+                                    <a href={`?wiki=${option.PAEAM}`} className="flex items-center">
                                         <img src={option.ImgURL} alt="" class="size-5 shrink-0 rounded-full" />
                                         <span class="ml-3 block truncate font-normal group-aria-selected/option:font-semibold">{option.NAME}</span>
-                                    </div>
+                                    </a>
                                     <span class="absolute inset-y-0 right-0 flex items-center pr-4 text-indigo-400 group-not-aria-selected/option:hidden group-focus/option:text-white in-[el-selectedcontent]:hidden">
                                         <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5">
                                             <path d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z" clip-rule="evenodd" fill-rule="evenodd" />
