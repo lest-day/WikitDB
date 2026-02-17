@@ -4,9 +4,7 @@ const config = require('../wikitdb.config.js');
 
 const Header = () => {
     const router = useRouter();
-    const currentWiki = router.isReady && router.query.wiki
-        ? router.query.wiki
-        : config.SUPPOST_WIKI[0].PAEAM;
+    const currentWiki = router.query.wiki ?? config.SUPPOST_WIKI[0].PAEAM;
     const selectedWiki = config.SUPPOST_WIKI.find(
         w => w.PAEAM === currentWiki
     );
