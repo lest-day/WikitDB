@@ -28,7 +28,7 @@ const Header = () => {
                                 <el-select id="select" name="selected" value="4" class="block">
                                     <button type="button" class="grid rounded-md w-full cursor-default grid-cols-1 px-3 py-2 text-sm font-medium text-left text-gray-300 hover:bg-white/5 hover:text-white">
                                         <el-selectedcontent class="col-start-1 row-start-1 flex items-center gap-3 pr-6">
-                                            <img src={matchedWiki.ImgURL || "./img/wikidot.png"} alt="" class="size-5 shrink-0 rounded-full bg-gray-700 outline -outline-offset-1 outline-white/10" />
+                                            <img src="./img/wikidot.png" alt="" class="size-5 shrink-0 rounded-full bg-gray-700 outline -outline-offset-1 outline-white/10" />
                                             <span class="block truncate">Wikidot</span>
                                         </el-selectedcontent>
                                         <svg viewBox="0 0 16 16" fill="currentColor" data-slot="icon" aria-hidden="true" class="col-start-1 row-start-1 size-5 self-center justify-self-end text-gray-400 sm:size-4">
