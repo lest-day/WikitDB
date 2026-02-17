@@ -47,7 +47,7 @@ const Header = () => {
                         </svg>
                     </button>
                     <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-2 sm:pr-0">
-                        <el-select id="select" name="selected" value="4" class="hidden sm:block">
+                        <el-select id="select" name="selected" value={currentWiki} class="hidden sm:block">
                             <button type="button" class="grid rounded-md bg-white/5 w-full cursor-default grid-cols-1 px-3 py-2 text-sm font-medium text-left text-gray-300 hover:text-white">
                                 <el-selectedcontent class="col-start-1 row-start-1 flex items-center gap-3 pr-6">
                                     <img src={selectedWiki?.ImgURL} alt="" class="size-5 shrink-0 rounded-full bg-gray-700 outline -outline-offset-1 outline-white/10" />
@@ -60,7 +60,7 @@ const Header = () => {
 
                             <el-options anchor="bottom start" popover class="max-h-56 w-4xs overflow-auto rounded-md bg-gray-800 py-1 text-base [--anchor-gap:--spacing(1)] data-leave:transition data-leave:transition-discrete data-leave:duration-100 data-leave:ease-in data-closed:data-leave:opacity-0 sm:text-sm">
                                 {config.SUPPOST_WIKI.map((option, index) => (
-                                    <el-option value="1" class="group/option relative block cursor-default py-2 pr-9 pl-3 text-sm font-medium text-gray-300 select-none focus:text-white">
+                                    <el-option value={option.PAEAM} class="group/option relative block cursor-default py-2 pr-9 pl-3 text-sm font-medium text-gray-300 select-none focus:text-white">
                                         <div onClick={() => router.push({ pathname: router.pathname, query: { ...router.query, wiki: option.PAEAM } })} className="flex items-center cursor-pointer">
                                             <img src={option.ImgURL} alt="" class="size-5 shrink-0 rounded-full" />
                                             <span class="ml-3 block truncate font-normal group-aria-selected/option:font-semibold">{option.NAME}</span>
@@ -93,7 +93,7 @@ const Header = () => {
                             <i class="fa-solid fa-circle-info"></i> 关于
                         </a>
                     </div>
-                    <el-select id="select" name="selected" value="4" class="block pt-2">
+                    <el-select id="select" name="selected" value={currentWiki} class="block pt-2">
                         <button type="button" class="grid rounded-md w-full cursor-default grid-cols-1 px-3 py-2 text-sm font-medium text-left text-gray-300 hover:bg-white/5 hover:text-white">
                             <el-selectedcontent class="col-start-1 row-start-1 flex items-center gap-3 pr-6">
                                 <img src={selectedWiki?.ImgURL} alt="" class="size-5 shrink-0 rounded-full bg-gray-700 outline -outline-offset-1 outline-white/10" />
@@ -106,7 +106,7 @@ const Header = () => {
 
                         <el-options anchor="bottom start" popover class="max-h-56 w-4xs overflow-auto rounded-md bg-gray-800 py-1 text-base [--anchor-gap:--spacing(1)] data-leave:transition data-leave:transition-discrete data-leave:duration-100 data-leave:ease-in data-closed:data-leave:opacity-0 sm:text-sm">
                             {config.SUPPOST_WIKI.map((option, index) => (
-                                <el-option value="1" class="group/option relative block cursor-default py-2 pr-9 pl-3 text-sm font-medium text-gray-300 select-none focus:text-white">
+                                <el-option value={option.PAEAM} class="group/option relative block cursor-default py-2 pr-9 pl-3 text-sm font-medium text-gray-300 select-none focus:text-white">
                                     <div onClick={() => router.push({ pathname: router.pathname, query: { ...router.query, wiki: option.PAEAM } })} className="flex items-center cursor-pointer">
                                         <img src={option.ImgURL} alt="" class="size-5 shrink-0 rounded-full" />
                                         <span class="ml-3 block truncate font-normal group-aria-selected/option:font-semibold">{option.NAME}</span>
