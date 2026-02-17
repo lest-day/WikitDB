@@ -60,7 +60,7 @@ const Header = () => {
 
                             <el-options anchor="bottom start" popover class="max-h-56 w-4xs overflow-auto rounded-md bg-gray-800 py-1 text-base [--anchor-gap:--spacing(1)] data-leave:transition data-leave:transition-discrete data-leave:duration-100 data-leave:ease-in data-closed:data-leave:opacity-0 sm:text-sm">
                                 {config.SUPPOST_WIKI.map((option, index) => (
-                                    <el-option value={option.PAEAM} class="group/option relative block cursor-default py-2 pr-9 pl-3 text-sm font-medium text-gray-300 select-none focus:text-white">
+                                    <el-option key={option.PAEAM} value={option.PAEAM} class="group/option relative block cursor-default py-2 pr-9 pl-3 text-sm font-medium text-gray-300 select-none focus:text-white">
                                         <div onClick={() => router.push({ pathname: router.pathname, query: { ...router.query, wiki: option.PAEAM } })} className="flex items-center cursor-pointer">
                                             <img src={option.ImgURL} alt="" class="size-5 shrink-0 rounded-full" />
                                             <span class="ml-3 block truncate font-normal group-aria-selected/option:font-semibold">{option.NAME}</span>
@@ -106,7 +106,7 @@ const Header = () => {
 
                         <el-options anchor="bottom start" popover class="max-h-56 w-4xs overflow-auto rounded-md bg-gray-800 py-1 text-base [--anchor-gap:--spacing(1)] data-leave:transition data-leave:transition-discrete data-leave:duration-100 data-leave:ease-in data-closed:data-leave:opacity-0 sm:text-sm">
                             {config.SUPPOST_WIKI.map((option, index) => (
-                                <el-option value={option.PAEAM} class="group/option relative block cursor-default py-2 pr-9 pl-3 text-sm font-medium text-gray-300 select-none focus:text-white">
+                                <el-option key= {option.PAEAM} value={option.PAEAM} class="group/option relative block cursor-default py-2 pr-9 pl-3 text-sm font-medium text-gray-300 select-none focus:text-white">
                                     <div onClick={() => router.push({ pathname: router.pathname, query: { ...router.query, wiki: option.PAEAM } })} className="flex items-center cursor-pointer">
                                         <img src={option.ImgURL} alt="" class="size-5 shrink-0 rounded-full" />
                                         <span class="ml-3 block truncate font-normal group-aria-selected/option:font-semibold">{option.NAME}</span>
