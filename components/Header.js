@@ -14,7 +14,6 @@ const Header = () => {
     }, [searchParams]);
 
     const selectedWiki = config.SUPPOST_WIKI.find(w => w.PAEAM === currentWiki);
-    console.log("selectedWiki" + selectedWiki);
 
     return (
         <header class="relative bg-gray-800/50 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
